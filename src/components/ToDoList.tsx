@@ -38,10 +38,6 @@ export const ToDoList: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
-
   return (
     <>
       <input
