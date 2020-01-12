@@ -1,0 +1,54 @@
+@import "colors";
+
+.app {
+  &__todo {
+    &__list {
+      &__item {
+        list-style: none;
+        padding: 5px 0;
+        color: $text-color;
+
+        &--complete {
+          span {
+            text-decoration: line-through;
+          }
+        }
+
+        button {
+          background: none;
+          border: none;
+          color: $text-color;
+        }
+
+        &__checkbox {
+          &:focus {
+            box-shadow: none !important;
+            outline: 0 !important;
+            outline-offset: 0 !important;
+          }
+          transform: scale(1.5);
+          cursor: pointer;
+          appearance: none;
+
+          &:after {
+            content: " ";
+            background-color: $body-background-color;
+            display: block;
+            width: 15px;
+            height: 15px;
+            visibility: visible;
+            border: 1px solid $border-color;
+            border-radius: 100%;
+            font-weight: bold;
+            font-size: 8px;
+            margin-right: 10px;
+          }
+          &:checked:after {
+            content: " ";
+            background-color: $border-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "colors";
+
+.app {
+  &__todo {
+    &__list {
+      padding: 20px 5px;
+    }
+
+    &__input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid $border-color;
+      background-color: $body-background-color;
+      outline: none;
+      padding: 5px;
+
+      &::placeholder {
+        color: $input-placeholder-color;
+      }
+    }
+  }
+}
